@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>flexbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+
+    <style>
+        body{
+            margin: 0;
+        }
+
+        #parent{
+            width: 100vw;
+            min-width: 1024px;
+            height: 100vh;
+            background-color: black;
+        }
+
+        #child-1{
+            background-color: red;
+            color: white;
+        }
+
+        #child-2{
+            background-color: green;
+            color: white;
+        }
+
+        #child-3{
+            background-color: blue;
+            color: white;
+        }
+
+        .parent{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .fix{
+            width: calc(100vw - 100px);
+            min-width: 300px;
+        }
+
+        @media screen and (max-width:640px){
+            .parent{
+            display: flex;
+            flex-direction: column;
+        }
+        .fix{
+            width: 100vw;
+        }
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="parent" class="parent">
+        <div id="child-1" class="child">
+                (1) Pellentesque sollicitudin nisi luctus, efficitur odio nec, ullamcorper diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam in orci sed sapien dapibus mollis eu vitae metus. Vestibulum sollicitudin efficitur nisi, at blandit nibh luctus sit amet. Donec et magna nec augue congue condimentum eu non velit. Nunc eu fringilla urna. Proin nec feugiat purus, ut facilisis sapien.
+            </div>
+        <div id="child-2" class="child fix">
+            (2) Pellentesque sollicitudin nisi luctus, efficitur odio nec, ullamcorper diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam in orci sed sapien dapibus mollis eu vitae metus. Vestibulum sollicitudin efficitur nisi, at blandit nibh luctus sit amet. Donec et magna nec augue congue condimentum eu non velit. Nunc eu fringilla urna. Proin nec feugiat purus, ut facilisis sapien.
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
