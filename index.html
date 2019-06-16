@@ -5,16 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>flexbox</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/swiper.min.css">
+    <script src="assets/js/swiper.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .swiper-container {
+            width: 70%;
+        }
+
+        .swiper-slide img{
+            width: 100%;
+        }
+        
+    </style>
+
+
 </head>
 <body>
-    <div class="list">
-        <ul>
-            <li><a href="entrance.html">エントランス用ファイル</a></li>
-            <li><a href="office.html">執務室用ファイル</a></li>
-        </ul>
-    </div>
+        <div class="swiper-container">
+                <!-- 全スライドをまとめるラッパー -->
+                <div class="swiper-wrapper">
+                    <!-- 各スライド -->
+                    <div class="swiper-slide"><img src="assets/img/slide01.jpg"></div>
+                    <div class="swiper-slide"><img src="assets/img/slide02.jpg"></div>
+                    <div class="swiper-slide"><img src="assets/img/slide03.jpg"></div>
+                </div>
+             
+                <!-- ページネーションを表示する場合 -->
+                <div class="swiper-pagination"></div>
+             
+                <!-- 前後スライドへのナビゲーションボタン(矢印)を表示する場合 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+             
+                <!-- スクロールバーを表示する場合 -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+            <script>
+                var mySwiper = new Swiper ('.swiper-container', {
+                    loop: true,
+                    speed: 600,
+                    slidesPerView: 1, 
+                    spaceBetween: 0,
+                    direction: 'horizontal',
+                    effect: 'slide',
+
+
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+    
+                    autoplay: {
+                        delay: 8000, // スライドが切り替わるまでの表示時間(ミリ秒)
+                        disableOnInteraction: false,
+                    },
+                });
+            </script>
+
+
 </body>
 </html>
 
